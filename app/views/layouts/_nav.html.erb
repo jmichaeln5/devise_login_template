@@ -3,7 +3,7 @@
   <% if current_user.present? == false %>
     <a class="navbar-brand" href="/">Devise Login Template</a>
   <% else %>
-    <a class="navbar-brand" href="<%= users_dashboard_path%>">Devise Login Template</a>
+    <a class="navbar-brand" href="<%= dashboard_path%>">Devise Login Template</a>
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

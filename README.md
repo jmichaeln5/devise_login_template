@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby -v 2.5.0
+- Rails -v 6.0.3
+- Clone into desired working directory
 
-Things you may want to cover:
+  $ bundle
+  $ rails g rename:into NEW_NAME #(to rename app)
+  $ rails db:create
+  $ rails db:migrate
 
-* Ruby version
+* CONFIGURE REDIRECT ON LOGIN
+app/controllers/application_controller.rb
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+class ApplicationController < ActionController::Base
+  def after_sign_in_path_for(resource)
+    dashboard_path #Your path here
+  end
+end
